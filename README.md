@@ -26,7 +26,7 @@ This repository focuses on a **clean, reproducible baseline** before expanding t
 
 Breadboard assembly of the ESP32 with the OLED display.
 
-<img src="media/breadboard.jpeg" width="450">
+<img src="media/breadboard.jpg" width="450">
 
 ---
 
@@ -53,7 +53,7 @@ Example of the OLED showing:
 * temperature
 * weather condition
 
-<img src="media/main_display.jpeg" width="350">
+<img src="media/main_display.jpg" width="350">
 
 ---
 
