@@ -26,7 +26,7 @@ This repository focuses on a **clean, reproducible baseline** before expanding t
 
 Breadboard assembly of the ESP32 with the OLED display.
 
-<img src="breadboard.jpg" width="450">
+<img src="media/breadboard.jpg" width="450">
 
 ---
 
@@ -41,7 +41,7 @@ During startup the device:
 
 Then the OLED displays **time and weather together**.
 
-<img src="boot_demo.gif" width="450">
+<img src="media/boot_demo.gif" width="450">
 
 ---
 
@@ -53,7 +53,7 @@ Example of the OLED showing:
 * temperature
 * weather condition
 
-<img src="main_display.jpg" width="350">
+<img src="media/main_display.jpg" width="350">
 
 ---
 
@@ -74,6 +74,9 @@ esp32-iot-clock-weather
 │   └── components.md
 │
 └── media
+    ├── breadboard.jpg
+    ├── boot_demo.gif
+    └── main_display.jpg
 ```
 
 ---
