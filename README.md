@@ -1,8 +1,8 @@
 # ESP32 IoT Clock + Weather Display
 
-A minimal ESP32 IoT project that connects to WiFi, synchronizes time using NTP, fetches weather data from the OpenWeather API, and displays the results on an OLED screen.
+A minimal ESP32 IoT project that connects to WiFi, synchronizes time using NTP, fetches weather data from the OpenWeather API, and displays the information on an OLED screen.
 
-This repository focuses on a **clean reproducible baseline** before expanding the system into a larger IoT companion device.
+This repository focuses on a **clean reproducible baseline** before expanding the system into a larger IoT desk companion device.
 
 ---
 
@@ -11,7 +11,7 @@ This repository focuses on a **clean reproducible baseline** before expanding th
 * WiFi connection using ESP32
 * Automatic time synchronization via NTP
 * Weather data retrieval using OpenWeather API
-* OLED display output (SSD1306 128x64)
+* Combined **time + weather display** on OLED (SSD1306 128x64)
 
 ---
 
@@ -22,22 +22,40 @@ This repository focuses on a **clean reproducible baseline** before expanding th
 
 ---
 
-## Example Output
+## Hardware Setup
 
-The OLED shows:
+Breadboard assembly and wiring of the ESP32 with the OLED display.
 
-Time (HH:MM)
+<img src="media/breadboard.jpg" width="450">
+<br>
+<img src="media/wiring.jpg" width="450">
 
-Temperature
+---
 
-Weather condition
+## Device Boot + Live Display
 
-Example:
+During startup the device:
 
-22:48
+1. boots
+2. connects to WiFi
+3. synchronizes time via NTP
+4. fetches weather data
 
-Temp: 29.4 C
-Weather: Clouds
+Then the OLED displays **time and weather together**.
+
+<img src="media/boot_demo.gif" width="450">
+
+---
+
+## Main Display
+
+Example of the final screen showing:
+
+* current time
+* temperature
+* weather condition
+
+<img src="media/main_display.jpg" width="350">
 
 ---
 
@@ -72,12 +90,29 @@ docs/setup.md
 
 ---
 
+## Configuration
+
+Before uploading the firmware, update the following fields inside the code:
+
+```
+const char* ssid     = "YOUR_WIFI_NAME";
+const char* password = "YOUR_WIFI_PASSWORD";
+
+String apiKey        = "YOUR_OPENWEATHER_API_KEY";
+```
+
+You can obtain a free API key from:
+
+https://openweathermap.org/api
+
+---
+
 ## Future Improvements
 
 Planned expansions:
 
 * sensor integration
-* animations
+* OLED animations
 * emotion-based display
 * ESP32-CAM visual input
 * IoT dashboard
