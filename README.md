@@ -2,7 +2,7 @@
 
 A minimal ESP32 IoT project that connects to WiFi, synchronizes time using NTP, fetches weather data from the OpenWeather API, and displays the information on an OLED screen.
 
-This repository focuses on a **clean reproducible baseline** before expanding the system into a larger IoT desk companion device.
+This repository focuses on a **clean, reproducible baseline** before expanding the system into a larger IoT desk companion device.
 
 ---
 
@@ -24,11 +24,9 @@ This repository focuses on a **clean reproducible baseline** before expanding th
 
 ## Hardware Setup
 
-Breadboard assembly and wiring of the ESP32 with the OLED display.
+Breadboard assembly of the ESP32 with the OLED display.
 
-<img src="media/breadboard.jpg" width="450">
-<br>
-<img src="media/wiring.jpg" width="450">
+<img src="breadboard.jpg" width="450">
 
 ---
 
@@ -39,23 +37,23 @@ During startup the device:
 1. boots
 2. connects to WiFi
 3. synchronizes time via NTP
-4. fetches weather data
+4. fetches weather data from the API
 
 Then the OLED displays **time and weather together**.
 
-<img src="media/boot_demo.gif" width="450">
+<img src="boot_demo.gif" width="450">
 
 ---
 
 ## Main Display
 
-Example of the final screen showing:
+Example of the OLED showing:
 
 * current time
 * temperature
 * weather condition
 
-<img src="media/main_display.jpg" width="350">
+<img src="main_display.jpg" width="350">
 
 ---
 
@@ -92,7 +90,7 @@ docs/setup.md
 
 ## Configuration
 
-Before uploading the firmware, update the following fields inside the code:
+Before uploading the firmware update the following fields inside the code:
 
 ```
 const char* ssid     = "YOUR_WIFI_NAME";
@@ -101,15 +99,13 @@ const char* password = "YOUR_WIFI_PASSWORD";
 String apiKey        = "YOUR_OPENWEATHER_API_KEY";
 ```
 
-You can obtain a free API key from:
+Get a free API key from:
 
 https://openweathermap.org/api
 
 ---
 
 ## Future Improvements
-
-Planned expansions:
 
 * sensor integration
 * OLED animations
